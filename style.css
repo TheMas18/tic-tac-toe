@@ -1,0 +1,344 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  background-color: black;
+
+  overflow: hidden;
+  font-size: 16px; /* Default font size */
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 8vh;
+  padding: 8px;
+  background-color: #191e27;
+  background: linear-gradient(0deg, #000, #191e27);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 10px 0 white;
+  z-index: 1;
+}
+
+nav::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Adjust to keep it behind the box shadow and reduce the height */
+  width: 100%;
+  height: 5px; /* Adjust as needed */
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.5)
+  );
+  background-size: 200% 100%;
+  animation: glowAnimation 5s linear infinite; /* Adjust the duration as needed */
+  z-index: 0; /* Ensure it stays behind the box shadow */
+}
+
+@keyframes glowAnimation {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+#gamezone-title {
+  font-size: 2.2vw;
+  color: aqua;
+}
+.container {
+  /* visibility:hidden; */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  margin-top: 5vw;
+}
+
+#left {
+  width: 60%;
+  height: 100%;
+}
+
+.game {
+  position: relative;
+
+  top: 70px;
+  height: 70vmin;
+  width: 70vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  left: 10vw;
+}
+
+.box {
+  width: 23.2vmin;
+  height: 23.2vmin;
+  color: white;
+  border: none;
+  font-size: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box:hover {
+  box-shadow: 0px 0px 10px 1px #12fff7 inset;
+}
+.br-r {
+  border-right: 2px solid #12fff7;
+}
+.br-b {
+  border-bottom: 2px solid #12fff7;
+}
+
+#right {
+  width: 40%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.player {
+  width: 90%;
+  height: 80%;
+
+  padding: 5px;
+}
+.turnPlayer {
+  width: 100%;
+  height: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25vw;
+  color: white;
+}
+
+#YourTurn {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 7vw;
+  color: white;
+  margin-top: 2vw;
+}
+
+.winPopUp {
+  width: 74%;
+  height: 30%;
+  z-index: 2;
+  position: absolute;
+  padding: 8px;
+  top: 18vw;
+  left: 16vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 6vw;
+  color: #12fff7;
+}
+.btn-c1 {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vw;
+}
+#reset-btn {
+  background-color: transparent;
+  border: 1px solid #12fff7;
+  width: 10vw;
+  height: 7vh;
+  color: #12fff7;
+  font-size: 2vw;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+#reset-btn:hover {
+  box-shadow: 0px 0px 10px 1px #12fff7;
+}
+
+.btn-c2 {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#newgame-btn {
+  background-color: transparent;
+  border: 1px solid #12fff7;
+  width: 14vw;
+  height: 8vh;
+  color: #12fff7;
+  font-size: 2vw;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+#newgame-btn:hover {
+  box-shadow: 0px 0px 10px 1px #12fff7;
+}
+
+.hide {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    width: 100%;
+    height: 9vh;
+
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust to keep it behind the box shadow and reduce the height */
+    width: 100%;
+    height: 5px; /* Adjust as needed */
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.5)
+    );
+    background-size: 200% 100%;
+    animation: glowAnimation 5s linear infinite; /* Adjust the duration as needed */
+    z-index: 0; /* Ensure it stays behind the box shadow */
+  }
+
+  @keyframes glowAnimation {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  #gamezone-title {
+    font-size: 2rem;
+    color: aqua;
+  }
+  body {
+    overflow: visible;
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+    gap: 6rem;
+    margin-top: 10vw;
+    /* Change flex-direction to column on smaller screens */
+  }
+  #left {
+    width: 90vw;
+    height: 100%;
+  }
+
+  #right {
+    width: 100vw;
+    height: 60%;
+  }
+  .player {
+    width: 97vw;
+    height: 20vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .turnPlayer {
+    width: 46%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13vw;
+  }
+  #YourTurn {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7vw;
+  }
+  #reset-btn {
+    width: 32%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vw;
+    padding: 25px;
+  }
+
+  .winPopUp {
+    width: 85vw;
+    height: 50vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 8.2%;
+    top: 20%;
+  }
+
+  #wtext {
+    font-size: 6.5vw;
+    color: #12fff7;
+  }
+  .btn-c2 {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #newgame-btn {
+    background-color: transparent;
+    border: 1px solid #12fff7;
+    width: 30vw;
+    height: 9vh;
+    color: #12fff7;
+    font-size: 4vw;
+    padding: 5px;
+    border-radius: 33px;
+  }
+
+  .hide {
+    display: none;
+  }
+}

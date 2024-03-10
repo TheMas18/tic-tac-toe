@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Zone</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav>
+      <p id="gamezone-title">Tic-Tac-Toe</p>
+    </nav>
+
+    <div class="container">
+      <section id="left">
+        <div class="game">
+          <div class="box br-r br-b"></div>
+          <div class="box br-r br-b"></div>
+          <div class="box br-b"></div>
+          <div class="box br-r br-b"></div>
+          <div class="box br-r br-b"></div>
+          <div class="box br-b"></div>
+          <div class="box br-r"></div>
+          <div class="box br-r"></div>
+          <div class="box"></div>
+        </div>
+      </section>
+      <section id="right">
+        <div class="player">
+          <div class="turnPlayer">O</div>
+          <p id="YourTurn">Your Turn</p>
+          <div class="btn-c1">
+            <button id="reset-btn">Reset</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="winPopUp hide">
+      <p id="wtext">Congratulations , Winner is O</p>
+      <div class="btn-c2">
+        <button id="newgame-btn">New Game</button>
+      </div>
+    </div>
+    <script src="app.js" defer></script>
+  </body>
+</html>
